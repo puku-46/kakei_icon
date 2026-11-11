@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- アプリのタイトル（ホーム画面に表示される名前） -->
+  <title>手軽なkakeiアプリ</title>
+  <meta name="apple-mobile-web-app-title" content="手軽なkakeiアプリ">
+
+  <!-- iPhone / iPad 用アイコン設定 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  
+  <!-- Android / ブラウザ用アイコン設定 -->
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- アプリのように全画面表示させる設定 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- ページを開いたら自動でStreamlitアプリへ移動する設定 -->
+  <script>
+    // 遷移先のStreamlitアプリのURL（必要に応じて書き換えてください）
+    const targetUrl = "https://streamlit.app";
+    
+    // 少しだけ待機してから自動転送（アイコン読み込み時間を確保）
+    setTimeout(function() {
+      window.location.replace(targetUrl);
+    }, 300);
+  </script>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding-top: 50px; color: #555;">
+  <p>「手軽なkakeiアプリ」を起動しています...</p>
+  <p style="font-size: 0.8em;">自動で切り替わらない場合は<a href="https://streamlit.app">こちら</a>をタップしてください。</p>
+</body>
+</html>
